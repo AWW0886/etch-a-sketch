@@ -17,8 +17,8 @@ function createGrid(x) {
         //for (j = 0; j < x; j++) {
             const content = document.createElement('div');
             content.classList.add('content');
-            //content.style.width = "50px";
-            //content.style.height = "50px";
+            content.style.width = (720 / x) + "px";
+            content.style.height = (720 / x) + "px";
             //content.textContent = 'Bye!';
  
             container.appendChild(content);
