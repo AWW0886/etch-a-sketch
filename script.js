@@ -1,15 +1,31 @@
 const container = document.querySelector('#container');
 
-function createDiv() {
-    for (i = 0; i < 5; i++) {
-        for (j = 0; j < 5; j++) {
+//function createSquare() {
+//    let square = document.createElement('div');
+//    square.classList.add('square');
+//    content.appendChild(square);
+//}
+
+function createGrid(x) {
+    for (let i = 0; i < x ** 2; i++) {
+        //const content = document.createElement('div');
+        //content.classList.add('content');
+        //content.textContent = 'Let\'s make a grid!';
+        //content.textContent = 'Hi!';
+
+        //container.appendChild(content);
+        //for (j = 0; j < x; j++) {
             const content = document.createElement('div');
             content.classList.add('content');
-            content.textContent = 'Let\'s make a grid!';
-
+            //content.style.width = "50px";
+            //content.style.height = "50px";
+            //content.textContent = 'Bye!';
+ 
             container.appendChild(content);
-        }
+            //createSquare();
+        //}
     }
 }
 
-createDiv();
+let x = prompt();
+createGrid(x);
