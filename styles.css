@@ -1,0 +1,14 @@
+#container {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    border: 5px solid seagreen;
+    height: 720px;
+    width: 720px;
+    margin: auto;
+}
+.square {
+    border: 1px solid orange;
+    /*margin: 0 0 0 0;*/
+}
