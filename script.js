@@ -11,9 +11,8 @@ function createGrid(x) {
 }
 
 function getLength() {
-    //let x = prompt();
-    while (x < 1 || x > 100) {
-        alert("Number must be from 1 to 100.");
+    while (x < 1 || x > 100 || isNaN(x)) {
+        alert("Must be a number from 1 to 100.");
         x = prompt();
     }
 }
