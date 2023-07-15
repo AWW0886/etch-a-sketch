@@ -7,6 +7,10 @@ function createGrid(x) {
         square.style.width = ((720 / x) - 2) + "px";
         square.style.height = ((720 / x) - 2) + "px";
         container.appendChild(square);
+    
+        square.addEventListener('mouseover', function(e) {
+            e.target.style.background = 'steelblue';
+        });
     }
 }
 
@@ -15,8 +19,13 @@ function getLength() {
         alert("Must be a number from 1 to 100.");
         x = prompt();
     }
-}
+} 
 
 let x = prompt();
 getLength();
 createGrid(x);
+
+//const div = document.querySelector('square');
+//div.addEventListener('mouseover', () => {
+//    div.style.backgroundColor = "blue";
+//});
