@@ -1,17 +1,5 @@
 const container = document.querySelector('#container');
 
-//const button = document.querySelector('#reset');
-//    button.addEventListener('click', () => {
-//        resetGrid();
-//        let x = prompt();
-//        confirmLength();
-//        createGrid(x);
-//    });
-
-//function resetGrid() {
-//    document.getElementsByName('div').reset();
-//}
-
 function createGrid(x) {
     for (let i = 0; i < x ** 2; i++) {
         let square = document.createElement('div');
@@ -24,23 +12,26 @@ function createGrid(x) {
             e.target.style.background = 'steelblue';
         });
     }
-//    let clear = document.getElementById("clear");
-//    clear.onclick = function() {
-//    let squares = document.getElementsByClassName('square');
-//        for (let i = 0; i < x ** 2; i++) {
-//            squares[i].style.backgroundColor = 'white';
-//        }
-//    }
+}
+
+function resetGrid() {
+    let reset = document.getElementById('reset');
+    let squares = document.getElementsByClassName('square');
+    
+    for (let i = squares.length - 1; i >= 0; i--) {
+        console.log(squares[i].remove());
+    }
+    let x = prompt("Enter a number from 1 to 100 for the length.");
+    confirmLength();
+    createGrid(x);
 }
 
 function clearGrid() {
-    let clear = document.getElementById("clear");
-    //clear.onclick = function() {
+    let clear = document.getElementById('clear');
     let squares = document.getElementsByClassName('square');
-        for (let i = 0; i < x ** 2; i++) {
+        for (let i = 0; i < squares.length; i++) {
             squares[i].style.backgroundColor = 'white';
         }
-    //}
 }
 
 function confirmLength() {
@@ -50,6 +41,6 @@ function confirmLength() {
     }
 }
 
-let x = prompt();
+let x = prompt("Enter a number from 1 to 100 for the length.");
 confirmLength();
 createGrid(x);
