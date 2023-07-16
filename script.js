@@ -7,12 +7,18 @@ function createGrid(x) {
         square.style.width = ((720 / x) - 2) + "px";
         square.style.height = ((720 / x) - 2) + "px";
         container.appendChild(square);
-    
+    //if (input === 1) {
         square.addEventListener('mouseover', function(e) {
-            //e.target.style.background = 'steelblue';
+            //e.target.style.backgroundColor = 'steelblue';
             e.target.style.backgroundColor = randomColor();
         });
-    }
+    //} else if (input === 2) {
+    //    square.addEventListener('mouseover', function(e) {
+    //        e.target.style.backgroundColor = 'steelblue';
+            //e.target.style.backgroundColor = randomColor();
+    //    });        
+    //}
+}
 }
 
 function randomColor() {
@@ -50,6 +56,22 @@ function confirmLength() {
     }
 }
 
+function colorChoice() {
+    //while (isNaN(color)){
+    //    alert("Please enter either 1 or 2.")
+    //    input = prompt();
+    //}
+    if (color === 1) {
+        return color;
+    } else {
+        alert("Please enter either 1 or 2.")
+        color = prompt();
+    }
+}
+
+
 let x = prompt("Enter a number from 1 to 100 for the length.");
 confirmLength();
+//let color = prompt("Choose 1 for blue, or 2 for random.");
+//colorChoice();
 createGrid(x);
