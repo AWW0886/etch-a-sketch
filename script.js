@@ -9,9 +9,18 @@ function createGrid(x) {
         container.appendChild(square);
     
         square.addEventListener('mouseover', function(e) {
-            e.target.style.background = 'steelblue';
+            //e.target.style.background = 'steelblue';
+            e.target.style.backgroundColor = randomColor();
         });
     }
+}
+
+function randomColor() {
+    let r = Math.floor(Math.random() * 256);
+    let g = Math.floor(Math.random() * 256);
+    let b = Math.floor(Math.random() * 256);
+    let rgbColor = 'rgb('+ r +','+ g +','+ b +')';
+    return rgbColor; 
 }
 
 function resetGrid() {
