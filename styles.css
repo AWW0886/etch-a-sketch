@@ -1,8 +1,6 @@
 #container {
     display: flex;
-    /*flex: 1;*/
     flex-wrap: wrap;
-    /*align-content: flex-start;*/
     border: 5px solid seagreen;
     height: 720px;
     width: 720px;
@@ -12,5 +10,3 @@
 .square {
     border: 1px solid lightgray;
 }
-
-/*.square:hover {background-color: steelblue;}*/
