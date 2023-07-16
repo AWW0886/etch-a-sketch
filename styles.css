@@ -1,10 +1,23 @@
 #container {
     display: flex;
     flex-wrap: wrap;
-    border: 5px solid seagreen;
+    border: 7.5px solid seagreen;
+    border-radius: 2.5px;
     height: 720px;
     width: 720px;
     margin: auto;
+}
+
+button {
+    border: 2.5px solid lightgray;
+    border-radius: 2.5px;
+    background-color: white;
+}
+
+button:hover {
+    background-color: darkgray;
+    color: white;
+
 }
 
 .square {
