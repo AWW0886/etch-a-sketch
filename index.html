@@ -8,12 +8,16 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div id="container"></div>
-    <label class="switch">
-        <input type="checkbox">
-        <span class="slider round"></span>
-    </label>
-    <button id="clear" onclick="clearGrid()">CLEAR</button>
-    <button id="reset" onclick="resetGrid()">RESET</button>
+    <div id="gridContainer"></div>
+    <div id="selectContainer">
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+        <div id="buttonContainer">
+            <button id="clear" onclick="clearGrid()">CLEAR</button>
+            <button id="reset" onclick="resetGrid()">RESET</button>
+        </div>
+    </div>
 </body>
 </html>
