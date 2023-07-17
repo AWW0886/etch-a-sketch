@@ -1,4 +1,4 @@
-const container = document.querySelector('#container');
+const container = document.querySelector('#gridContainer');
 
 function createGrid(x) {
     for (let i = 0; i < x ** 2; i++) {
@@ -6,22 +6,24 @@ function createGrid(x) {
         square.classList.add('square');
         square.style.width = ((720 / x) - 2) + "px";
         square.style.height = ((720 / x) - 2) + "px";
-        container.appendChild(square);
-    //if (input === 1) {
+        square.style.backgroundColor = 'white';
+        gridContainer.appendChild(square);
+
         square.addEventListener('mouseover', function(e) {
-            //e.target.style.backgroundColor = 'steelblue';
-            e.target.style.backgroundColor = randomColor();
+            e.target.style.backgroundColor = 'dimgrey';
+        // - Random solution below; still figuring out implementation -    
+        //    e.target.style.backgroundColor = colorRandom();
         });
-    //} else if (input === 2) {
-    //    square.addEventListener('mouseover', function(e) {
-    //        e.target.style.backgroundColor = 'steelblue';
-            //e.target.style.backgroundColor = randomColor();
-    //    });        
-    //}
-}
+    }
 }
 
-function randomColor() {
+// - Function below disabled for you -
+//function myFunction() {
+//    document.body.classList.toggle('switch-on');
+//}
+
+// - Random function below for future implementation -
+function colorRandom() {
     let r = Math.floor(Math.random() * 256);
     let g = Math.floor(Math.random() * 256);
     let b = Math.floor(Math.random() * 256);
@@ -56,22 +58,6 @@ function confirmLength() {
     }
 }
 
-function colorChoice() {
-    //while (isNaN(color)){
-    //    alert("Please enter either 1 or 2.")
-    //    input = prompt();
-    //}
-    if (color === 1) {
-        return color;
-    } else {
-        alert("Please enter either 1 or 2.")
-        color = prompt();
-    }
-}
-
-
 let x = prompt("Enter a number from 1 to 100 for the length.");
 confirmLength();
-//let color = prompt("Choose 1 for blue, or 2 for random.");
-//colorChoice();
 createGrid(x);
