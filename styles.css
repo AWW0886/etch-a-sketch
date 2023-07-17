@@ -1,12 +1,19 @@
 body {
+    background-color: whitesmoke;
     display: flex;
     flex-direction: column;
 }
+/* CSS for toggle; not yet implemented */
+.switch-on {
+  background: seagreen;
+  background: linear-gradient(90deg, steelblue, whitesmoke, steelblue);
+}
 
 #gridContainer {
+    background-color: white;
     display: flex;
     flex-wrap: wrap;
-    border: 10px solid steelblue;
+    border: 7.5px solid steelblue;
     border-radius: 5px;
     height: 720px;
     width: 720px;
@@ -23,11 +30,12 @@ body {
 #buttonContainer {
   display: flex;
   gap: 2.5px;
+  margin-top: 0.5px;
 }
 
 button {
     border: 2.5px solid lightgray;
-    border-radius: 2.5px;
+    border-radius: 5px;
     background-color: white;
     height: 30px;
     width: 60px;
@@ -41,6 +49,10 @@ button:hover {
 
 .square {
     border: 1px solid lightgray;
+}
+
+body.dark {
+  background-color: steelblue;
 }
 
 /* The switch - the box around the slider */
@@ -68,7 +80,7 @@ button:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: darkgray;
+    background-color: darkgrey;
     -webkit-transition: .4s;
     transition: .4s;
   }
