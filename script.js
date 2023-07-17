@@ -17,7 +17,7 @@ function createGrid(x) {
     }
 }
 
-// - Function below disabled for you -
+// - Function below disabled for now -
 //function myFunction() {
 //    document.body.classList.toggle('switch-on');
 //}
