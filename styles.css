@@ -1,28 +1,36 @@
 body {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
 }
 
-#container {
+#gridContainer {
     display: flex;
     flex-wrap: wrap;
-    border: 7.5px solid seagreen;
-    border-radius: 2.5px;
+    border: 10px solid steelblue;
+    border-radius: 5px;
     height: 720px;
     width: 720px;
     margin: auto;
 }
 
-#clear {
-    margin-bottom: 1px;
+#selectContainer {
+  display: flex;
+  gap: 5px;
+  margin: auto;
+  margin-top: 2px;
+}
+
+#buttonContainer {
+  display: flex;
+  gap: 2.5px;
 }
 
 button {
     border: 2.5px solid lightgray;
     border-radius: 2.5px;
     background-color: white;
-    width: 63px;
+    height: 30px;
+    width: 60px;
 }
 
 button:hover {
@@ -53,7 +61,6 @@ button:hover {
     height: 0;
   }
   
-  /* The slider */
   .slider {
     position: absolute;
     cursor: pointer;
@@ -61,7 +68,7 @@ button:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: seagreen;
+    background-color: darkgray;
     -webkit-transition: .4s;
     transition: .4s;
   }
@@ -92,7 +99,6 @@ button:hover {
     transform: translateX(26px);
   }
 
-  /* Rounded sliders */
 .slider.round {
     border-radius: 2.5px;
   }
