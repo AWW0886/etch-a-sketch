@@ -3,6 +3,14 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+/* CSS for temporary progress header */
+h4 {
+  margin-top: 0;
+  margin-bottom: 5px;
+  color: dimgrey;
+}
+
 /* CSS for toggle; not yet implemented */
 .switch-on {
   background: seagreen;
