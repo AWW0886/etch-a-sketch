@@ -21,6 +21,14 @@ function createGrid(x) {
 //function myFunction() {
 //    document.body.classList.toggle('switch-on');
 //}
+function colorChange() {
+    let square = document.querySelector('.square');
+    square.addEventListener('mouseover', function(e) {
+    e.target.style.backgroundColor = colorRandom();
+    //square.style.backgroundColor = colorRandom();
+    });
+}
+
 
 // - Random function below for future implementation -
 function colorRandom() {
