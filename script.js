@@ -64,3 +64,9 @@ function confirmLength() {
 let x = prompt("Enter a number from 1 to 100 for the length.");
 confirmLength();
 createGrid(x);
+
+
+// - Function below disabled for now -
+//function myFunction() {
+//    document.body.classList.toggle('switch-on');
+//}
