@@ -22,21 +22,28 @@ function createGrid(x) {
 //    document.body.classList.toggle('switch-on');
 //}
 function colorChange() {
-    let square = document.querySelector('.square');
-    square.addEventListener('mouseover', function(e) {
-    e.target.style.backgroundColor = colorRandom();
-    //square.style.backgroundColor = colorRandom();
-    });
+    for (let i = 0; i < x ** 2; i++) {
+        let square = document.querySelector('.square');
+        gridContainer.appendChild(square);
+        square.addEventListener('mouseover', function(e) {
+        e.target.style.backgroundColor = colorRandom();
+        //square.style.backgroundColor = colorRandom();
+        });
+    }
 }
-
 
 // - Random function below for future implementation -
 function colorRandom() {
-    let r = Math.floor(Math.random() * 256);
-    let g = Math.floor(Math.random() * 256);
-    let b = Math.floor(Math.random() * 256);
-    let rgbColor = 'rgb('+ r +','+ g +','+ b +')';
-    return rgbColor; 
+    for (let i = 0; i < x ** 2; i++) {
+        let square = document.querySelector('.square');
+        let r = Math.floor(Math.random() * 256);
+        let g = Math.floor(Math.random() * 256);
+        let b = Math.floor(Math.random() * 256);
+        gridContainer.appendChild(square);
+        square.addEventListener('mouseover', function(e) {
+        e.target.style.backgroundColor = 'rgb('+ r +','+ g +','+ b +')';
+        });
+    }
 }
 
 function resetGrid() {
