@@ -8,38 +8,26 @@ function createGrid(x) {
         square.style.height = ((720 / x) - 2) + "px";
         square.style.backgroundColor = 'white';
         gridContainer.appendChild(square);
-
-        square.addEventListener('mouseover', function(e) {
-            e.target.style.backgroundColor = 'dimgrey';
-        // - Random solution below; still figuring out implementation -    
-        //    e.target.style.backgroundColor = colorRandom();
-        });
     }
 }
 
-// - Function below disabled for now -
-//function myFunction() {
-//    document.body.classList.toggle('switch-on');
-//}
-function colorChange() {
+function colorGrey() {
     for (let i = 0; i < x ** 2; i++) {
         let square = document.querySelector('.square');
-        gridContainer.appendChild(square);
+        console.log(gridContainer.appendChild(square));
         square.addEventListener('mouseover', function(e) {
-        e.target.style.backgroundColor = colorRandom();
-        //square.style.backgroundColor = colorRandom();
+            e.target.style.backgroundColor = 'dimgrey';
         });
     }
 }
 
-// - Random function below for future implementation -
 function colorRandom() {
     for (let i = 0; i < x ** 2; i++) {
         let square = document.querySelector('.square');
         let r = Math.floor(Math.random() * 256);
         let g = Math.floor(Math.random() * 256);
         let b = Math.floor(Math.random() * 256);
-        gridContainer.appendChild(square);
+        console.log(gridContainer.appendChild(square));
         square.addEventListener('mouseover', function(e) {
         e.target.style.backgroundColor = 'rgb('+ r +','+ g +','+ b +')';
         });
