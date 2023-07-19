@@ -15,7 +15,7 @@ function colorGrey() {
     for (let i = 0; i < x ** 2; i++) {
         let square = document.querySelector('.square');
         console.log(gridContainer.appendChild(square));
-        square.addEventListener('mouseover', function(e) {
+        square.addEventListener('mouseover', e => {
             e.target.style.backgroundColor = 'dimgrey';
         });
     }
@@ -28,7 +28,7 @@ function colorRandom() {
         let g = Math.floor(Math.random() * 256);
         let b = Math.floor(Math.random() * 256);
         console.log(gridContainer.appendChild(square));
-        square.addEventListener('mouseover', function(e) {
+        square.addEventListener('mouseover', e => {
         e.target.style.backgroundColor = 'rgb('+ r +','+ g +','+ b +')';
         });
     }
